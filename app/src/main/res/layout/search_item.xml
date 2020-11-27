@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="-10dp"
+    android:background="@drawable/box">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/movie_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:placeholderImage="@drawable/ic_popcorn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="40dp"
+        app:placeholderImageScaleType="centerInside"
+        />
+
+        <TextView
+            android:id="@+id/movie_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Spider Man 2002"
+            android:singleLine="true"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/poppins_semiold"
+            app:layout_constraintStart_toEndOf="@id/movie_image"
+            app:layout_constraintTop_toTopOf="@id/movie_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="20dp"
+            />
+    <TextView
+        android:id="@+id/movie_genres"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Adventure"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toEndOf="@id/movie_image"
+        app:layout_constraintTop_toBottomOf="@id/movie_name"
+        android:layout_marginStart="20dp"
+        />
+    <RatingBar
+        android:id="@+id/movie_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:stepSize="1"
+        android:isIndicator="false"
+        style="?android:attr/ratingBarStyleSmall"
+        android:progressTint="#03A9F4"
+        app:layout_constraintTop_toBottomOf="@id/movie_genres"
+        app:layout_constraintStart_toStartOf="@id/movie_genres"
+        android:layout_marginBottom="40dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
